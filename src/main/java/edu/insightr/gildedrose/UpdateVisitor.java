@@ -26,6 +26,7 @@ public class UpdateVisitor implements IVisitor{
         {
             b.setQuality(b.getQuality()+2);
         }
+        else b.setQuality(b.getQuality()+1);
         if(b.getQuality() < 0)
             b.setQuality(0);
         if(b.getQuality() > 50)
