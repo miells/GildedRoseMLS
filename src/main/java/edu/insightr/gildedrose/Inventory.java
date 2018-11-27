@@ -88,10 +88,29 @@ public class Inventory {
         }
     }
 
+    public void updateSellIn()
+    {
+        for(int i=0; i<items.length; i++)
+        {
+            items[i].setSellIn(items[i].getSellIn()-1);
+        }
+    }
+
+    public void updateQualityVisitor()
+    {
+        UpdateVisitor uv = new UpdateVisitor();
+        for(int i=0; i<items.length; i++)
+        {
+            items[i].accept(uv);
+        }
+    }
+
     public static void main(String[] args) {
         Inventory inventory = new Inventory();
+        inventory.printInventory();
         for (int i = 0; i < 10; i++) {
-            inventory.updateQuality();
+            inventory.updateSellIn();
+            inventory.updateQualityVisitor();
             inventory.printInventory();
         }
     }

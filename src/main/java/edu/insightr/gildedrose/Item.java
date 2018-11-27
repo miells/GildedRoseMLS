@@ -1,6 +1,6 @@
 package edu.insightr.gildedrose;
 
-public abstract class Item {
+public abstract class Item implements IVisitable{
 
     private String name;
     private int sellIn;
@@ -12,6 +12,11 @@ public abstract class Item {
         this.name = name;
         this.sellIn = sellIn;
         this.quality = quality;
+    }
+
+    public Item(){
+        name = null;
+        sellIn = 0;
     }
 
     public String getName() {

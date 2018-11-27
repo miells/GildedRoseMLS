@@ -11,7 +11,7 @@ public class ItemTest {
 
     @Before
     public void setUp() throws Exception {
-        item =  new Item("", 3, 80);
+        //item =  new Item("", 3, 80);
     }
 
     @After
